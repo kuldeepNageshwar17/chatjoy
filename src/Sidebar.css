@@ -1,0 +1,51 @@
+.sidebar {
+    flex: 0.35;
+    background-color: #d5d6d1;
+    /* remove this for scroll bar well  fuctioning */
+    /* height: 100vh; */
+    border-right: 1px solid lightblue;
+    /* display: flex; */
+    /* overflow-y: scroll; */
+}
+
+.sidebar__avatar {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.sidebar__header {
+    display: flex;
+    flex: 1;
+    padding: 10px;
+    height: 50px;
+    align-items: center;
+}
+
+.sidebar__input {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    background-color: rgb(224, 218, 218);
+    border-radius: 5px;
+    color: rgb(92, 83, 83);
+    padding: 2px 5px;
+}
+
+.sidebar__input>input {
+    border: none;
+    background: transparent;
+    outline-width: 0;
+}
+
+.sidebar__chats {
+    overflow: scroll;
+    /* i do this for scroll bar well Functioning  */
+    height: 90vh;
+    /* display: none; */
+    /* flex-direction: column; */
+}
+
+.sidebar__chats::-webkit-scrollbar {
+    display: none;
+}
