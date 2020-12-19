@@ -21,7 +21,7 @@ function Chat () {
       db.collection('chats')
         .doc(chatId)
         .collection('messages')
-        .orderBy('timestamp', 'asc')
+        .orderBy('timestamp', 'desc')
         .onSnapshot(snapshot =>
           setmessages(          
             snapshot.docs.map(doc =>{
@@ -78,6 +78,7 @@ function Chat () {
             value={Input}
             placeholder='imessage'
             onChange={e => setInput(e.target.value)}
+            disabled={!chatId?true:""}
           />
           <button onClick={sendMessage}>Send Message</button>
         </form>
